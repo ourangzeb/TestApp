@@ -36,13 +36,13 @@
 
 /* Begin PBXFileReference section */
 		CB3E0F411DF7283B009CB04A /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB3E0F441DF7283B009CB04A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CB3E0F461DF7283B009CB04A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CB3E0F441DF7283B009CB04A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
+		CB3E0F461DF7283B009CB04A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../ViewController.swift; sourceTree = "<group>"; };
 		CB3E0F491DF7283B009CB04A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB3E0F4C1DF7283B009CB04A /* TestApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestApp.xcdatamodel; sourceTree = "<group>"; };
-		CB3E0F4E1DF7283B009CB04A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CB3E0F4E1DF7283B009CB04A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../Assets.xcassets; sourceTree = "<group>"; };
 		CB3E0F511DF7283B009CB04A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CB3E0F531DF7283B009CB04A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB3E0F531DF7283B009CB04A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		CB3E0F581DF7283B009CB04A /* TestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB3E0F5C1DF7283B009CB04A /* TestAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppTests.swift; sourceTree = "<group>"; };
 		CB3E0F5E1DF7283B009CB04A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,13 +99,10 @@
 		CB3E0F431DF7283B009CB04A /* TestApp */ = {
 			isa = PBXGroup;
 			children = (
-				CB3E0F441DF7283B009CB04A /* AppDelegate.swift */,
-				CB3E0F461DF7283B009CB04A /* ViewController.swift */,
-				CB3E0F481DF7283B009CB04A /* Main.storyboard */,
-				CB3E0F4E1DF7283B009CB04A /* Assets.xcassets */,
-				CB3E0F501DF7283B009CB04A /* LaunchScreen.storyboard */,
-				CB3E0F531DF7283B009CB04A /* Info.plist */,
-				CB3E0F4B1DF7283B009CB04A /* TestApp.xcdatamodeld */,
+				CB3E0F9A1DF72938009CB04A /* Presentation Layer */,
+				CB3E0F971DF72932009CB04A /* Data Access Layer */,
+				CB3E0F941DF7292D009CB04A /* Business Layer */,
+				CB3E0F881DF72928009CB04A /* Common */,
 			);
 			path = TestApp;
 			sourceTree = "<group>";
@@ -126,6 +123,193 @@
 				CB3E0F691DF7283B009CB04A /* Info.plist */,
 			);
 			path = TestAppUITests;
+			sourceTree = "<group>";
+		};
+		CB3E0F881DF72928009CB04A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CB3E0F531DF7283B009CB04A /* Info.plist */,
+				CB3E0F441DF7283B009CB04A /* AppDelegate.swift */,
+				CB3E0F891DF72928009CB04A /* Constants */,
+				CB3E0F8A1DF72928009CB04A /* Helpers & Extensions */,
+				CB3E0F8B1DF72928009CB04A /* Library */,
+				CB3E0F8C1DF72928009CB04A /* Resources */,
+				CB3E0F931DF72928009CB04A /* Vendors */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		CB3E0F891DF72928009CB04A /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		CB3E0F8A1DF72928009CB04A /* Helpers & Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Helpers & Extensions";
+			sourceTree = "<group>";
+		};
+		CB3E0F8B1DF72928009CB04A /* Library */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		CB3E0F8C1DF72928009CB04A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CB3E0F8D1DF72928009CB04A /* Fonts */,
+				CB3E0F8E1DF72928009CB04A /* Images */,
+				CB3E0F8F1DF72928009CB04A /* Localization */,
+				CB3E0F901DF72928009CB04A /* Plist */,
+				CB3E0F911DF72928009CB04A /* Sounds */,
+				CB3E0F921DF72928009CB04A /* Videos */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CB3E0F8D1DF72928009CB04A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		CB3E0F8E1DF72928009CB04A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				CB3E0F4E1DF7283B009CB04A /* Assets.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		CB3E0F8F1DF72928009CB04A /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		CB3E0F901DF72928009CB04A /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Plist;
+			sourceTree = "<group>";
+		};
+		CB3E0F911DF72928009CB04A /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		CB3E0F921DF72928009CB04A /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Videos;
+			sourceTree = "<group>";
+		};
+		CB3E0F931DF72928009CB04A /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+		CB3E0F941DF7292D009CB04A /* Business Layer */ = {
+			isa = PBXGroup;
+			children = (
+				CB3E0F951DF7292D009CB04A /* Model Layer */,
+				CB3E0F961DF7292D009CB04A /* Service Layer */,
+			);
+			path = "Business Layer";
+			sourceTree = "<group>";
+		};
+		CB3E0F951DF7292D009CB04A /* Model Layer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model Layer";
+			sourceTree = "<group>";
+		};
+		CB3E0F961DF7292D009CB04A /* Service Layer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Service Layer";
+			sourceTree = "<group>";
+		};
+		CB3E0F971DF72932009CB04A /* Data Access Layer */ = {
+			isa = PBXGroup;
+			children = (
+				CB3E0F981DF72932009CB04A /* Network Layer */,
+				CB3E0F991DF72932009CB04A /* Persistant Layer */,
+			);
+			path = "Data Access Layer";
+			sourceTree = "<group>";
+		};
+		CB3E0F981DF72932009CB04A /* Network Layer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Network Layer";
+			sourceTree = "<group>";
+		};
+		CB3E0F991DF72932009CB04A /* Persistant Layer */ = {
+			isa = PBXGroup;
+			children = (
+				CB3E0F4B1DF7283B009CB04A /* TestApp.xcdatamodeld */,
+			);
+			path = "Persistant Layer";
+			sourceTree = "<group>";
+		};
+		CB3E0F9A1DF72938009CB04A /* Presentation Layer */ = {
+			isa = PBXGroup;
+			children = (
+				CB3E0F9B1DF72938009CB04A /* Controllers */,
+				CB3E0F9C1DF72938009CB04A /* CustomCells */,
+				CB3E0F9D1DF72938009CB04A /* Storyboards */,
+				CB3E0F9E1DF72938009CB04A /* Views */,
+			);
+			path = "Presentation Layer";
+			sourceTree = "<group>";
+		};
+		CB3E0F9B1DF72938009CB04A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CB3E0F461DF7283B009CB04A /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CB3E0F9C1DF72938009CB04A /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		CB3E0F9D1DF72938009CB04A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CB3E0F481DF7283B009CB04A /* Main.storyboard */,
+				CB3E0F501DF7283B009CB04A /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		CB3E0F9E1DF72938009CB04A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,6 +490,7 @@
 				CB3E0F491DF7283B009CB04A /* Base */,
 			);
 			name = Main.storyboard;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		CB3E0F501DF7283B009CB04A /* LaunchScreen.storyboard */ = {
@@ -314,6 +499,7 @@
 				CB3E0F511DF7283B009CB04A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -535,7 +721,8 @@
 				CB3E0F4C1DF7283B009CB04A /* TestApp.xcdatamodel */,
 			);
 			currentVersion = CB3E0F4C1DF7283B009CB04A /* TestApp.xcdatamodel */;
-			path = TestApp.xcdatamodeld;
+			name = TestApp.xcdatamodeld;
+			path = ../../TestApp.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
