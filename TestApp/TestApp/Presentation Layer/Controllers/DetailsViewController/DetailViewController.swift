@@ -16,24 +16,27 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleofList: UILabel!
     
+    // Pragma MARK: View Controller Functions
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
         self.setData()
-    
     }
     
+    
+    // Pragma MARK: Set Data To outlets
     
     func setData(){
         self.titleofList.text = singleITemData.title as String
