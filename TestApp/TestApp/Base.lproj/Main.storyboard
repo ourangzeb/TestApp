@@ -48,13 +48,13 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PFk-fr-WTf">
-                                                    <rect key="frame" x="116" y="39" width="42" height="21"/>
+                                                    <rect key="frame" x="116" y="39" width="231" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zS0-g0-xGO">
-                                                    <rect key="frame" x="116" y="68" width="42" height="21"/>
+                                                    <rect key="frame" x="116" y="68" width="231" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -62,10 +62,12 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="PFk-fr-WTf" firstAttribute="leading" secondItem="TC5-EE-9d3" secondAttribute="trailing" constant="8" symbolic="YES" id="2Ym-Y7-jRB"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="PFk-fr-WTf" secondAttribute="trailing" constant="20" id="8gz-oH-63I"/>
                                                 <constraint firstItem="zS0-g0-xGO" firstAttribute="top" secondItem="PFk-fr-WTf" secondAttribute="bottom" constant="8" symbolic="YES" id="L8p-jb-9DC"/>
                                                 <constraint firstItem="TC5-EE-9d3" firstAttribute="leading" secondItem="6gZ-zu-KA6" secondAttribute="leadingMargin" id="NIq-Qr-NZa"/>
                                                 <constraint firstItem="TC5-EE-9d3" firstAttribute="centerY" secondItem="6gZ-zu-KA6" secondAttribute="centerY" id="TTD-96-1HK"/>
                                                 <constraint firstItem="PFk-fr-WTf" firstAttribute="leading" secondItem="zS0-g0-xGO" secondAttribute="leading" id="aPS-3l-Nv2"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="zS0-g0-xGO" secondAttribute="trailing" constant="20" id="dct-Ce-0ak"/>
                                                 <constraint firstItem="PFk-fr-WTf" firstAttribute="top" secondItem="6gZ-zu-KA6" secondAttribute="topMargin" constant="31" id="jVz-aY-4EF"/>
                                                 <constraint firstItem="TC5-EE-9d3" firstAttribute="top" secondItem="6gZ-zu-KA6" secondAttribute="topMargin" constant="6" id="mt1-GQ-Suu"/>
                                             </constraints>

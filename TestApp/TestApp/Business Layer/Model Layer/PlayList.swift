@@ -13,10 +13,11 @@ class PlayList: NSObject {
     var title : String!;
     var artist : String!
     var imageUrl : String!;
-    var id : String!;
-    var playlist : String!
-    var artist_id : String!
-    var Episodecount: String!
-    var status : String!
+    
+    init(dictionar : NSDictionary) {
+        title = dictionar["title"] as! String
+        artist = dictionar["artist"] as! String
+        imageUrl = dictionar["image"] as! String
+    }
    
 }

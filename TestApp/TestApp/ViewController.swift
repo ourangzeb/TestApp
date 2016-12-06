@@ -8,16 +8,18 @@
 
 import UIKit
 import Alamofire
-
+import Kingfisher
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
 
     @IBOutlet weak var listTableView: UITableView!
     @IBOutlet weak var searchController: UISearchBar!
-    
+    var list : [PlayList] = [PlayList]()
+    var filteredCandies = [PlayList]()
+
     // Pragma MARK: View Controller Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+       setlatestepisodes()
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,9 +29,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     
+    func setlatestepisodes(){
+        
+        let value = NetworkManager();
+        
+        value.getJsonData(completionHandler: { (latest : [PlayList]?, error1: Error?) -> Void in
+            self.list = latest!
+            self.listTableView.reloadData()
+        })
+    }
+
     
-    
-    
+   
     
     
     
@@ -42,15 +53,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return 1;
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4;
+        return list.count;
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: CustomTableViewCell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! CustomTableViewCell
         
-        cell.artist.text = "Hello world"
-        cell.title.text = "Hello world"
-        
+        cell.artist.text = list[indexPath.row].artist
+        cell.title.text = list[indexPath.row].title
+        let url = URL(string: list[indexPath.row].imageUrl)
+        cell.cellimageView.kf.setImage(with: url)
         return cell
     }
 }
