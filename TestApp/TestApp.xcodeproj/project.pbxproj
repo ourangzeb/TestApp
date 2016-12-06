@@ -13,6 +13,7 @@
 		CB11CDA91DF7346600B1A9B9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11CDA81DF7346600B1A9B9 /* NetworkManager.swift */; };
 		CB11CDAB1DF73BB600B1A9B9 /* PlayList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11CDAA1DF73BB600B1A9B9 /* PlayList.swift */; };
 		CB11CDAD1DF741FB00B1A9B9 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11CDAC1DF741FB00B1A9B9 /* CustomTableViewCell.swift */; };
+		CB11CDB11DF75CB900B1A9B9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11CDB01DF75CB900B1A9B9 /* DetailViewController.swift */; };
 		CB3E0F451DF7283B009CB04A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3E0F441DF7283B009CB04A /* AppDelegate.swift */; };
 		CB3E0F471DF7283B009CB04A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3E0F461DF7283B009CB04A /* ViewController.swift */; };
 		CB3E0F4A1DF7283B009CB04A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB3E0F481DF7283B009CB04A /* Main.storyboard */; };
@@ -53,9 +54,10 @@
 		CB11CDA81DF7346600B1A9B9 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		CB11CDAA1DF73BB600B1A9B9 /* PlayList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayList.swift; sourceTree = "<group>"; };
 		CB11CDAC1DF741FB00B1A9B9 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		CB11CDB01DF75CB900B1A9B9 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CB3E0F411DF7283B009CB04A /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB3E0F441DF7283B009CB04A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
-		CB3E0F461DF7283B009CB04A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../ViewController.swift; sourceTree = "<group>"; };
+		CB3E0F461DF7283B009CB04A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../../ViewController.swift; sourceTree = "<group>"; };
 		CB3E0F491DF7283B009CB04A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB3E0F4C1DF7283B009CB04A /* TestApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestApp.xcdatamodel; sourceTree = "<group>"; };
 		CB3E0F4E1DF7283B009CB04A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../Assets.xcassets; sourceTree = "<group>"; };
@@ -105,6 +107,22 @@
 				52B33AED5BF6B11C42D58D58 /* Pods_TestAppUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB11CDAE1DF75C9500B1A9B9 /* DetailsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CB11CDB01DF75CB900B1A9B9 /* DetailViewController.swift */,
+			);
+			path = DetailsViewController;
+			sourceTree = "<group>";
+		};
+		CB11CDAF1DF75CA100B1A9B9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CB3E0F461DF7283B009CB04A /* ViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		CB3E0F381DF7283A009CB04A = {
@@ -319,7 +337,8 @@
 		CB3E0F9B1DF72938009CB04A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CB3E0F461DF7283B009CB04A /* ViewController.swift */,
+				CB11CDAF1DF75CA100B1A9B9 /* ViewController */,
+				CB11CDAE1DF75C9500B1A9B9 /* DetailsViewController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -648,6 +667,7 @@
 				CB3E0F4D1DF7283B009CB04A /* TestApp.xcdatamodeld in Sources */,
 				CB11CDAB1DF73BB600B1A9B9 /* PlayList.swift in Sources */,
 				CB3E0F451DF7283B009CB04A /* AppDelegate.swift in Sources */,
+				CB11CDB11DF75CB900B1A9B9 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

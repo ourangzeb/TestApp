@@ -11,15 +11,22 @@ import Alamofire
 import Kingfisher
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
 
+ 
     @IBOutlet weak var listTableView: UITableView!
-    @IBOutlet weak var searchController: UISearchBar!
     var list : [PlayList] = [PlayList]()
-    var filteredCandies = [PlayList]()
+    var listsearched = [PlayList]()
+    var presentlist = [PlayList]()
+    var selectedindex : Int = 0
+    let searchController = UISearchController(searchResultsController: nil)
 
     // Pragma MARK: View Controller Functions
     override func viewDidLoad() {
         super.viewDidLoad()
        setlatestepisodes()
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        definesPresentationContext = true
+        listTableView.tableHeaderView = searchController.searchBar
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,7 +35,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "Details"{
+            let controller  : DetailViewController  = segue.destination as! DetailViewController
+            controller.singleITemData = presentlist[selectedindex]
+            
+        }
+        
+        
+    }
     func setlatestepisodes(){
         
         let value = NetworkManager();
@@ -38,10 +54,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self.listTableView.reloadData()
         })
     }
-
+    func filterContentForSearchText(searchText: String, scope: String = "All") {
+        listsearched  = list.filter { singlelist in
+            return singlelist.title.lowercased().contains(searchText.lowercased()) || singlelist.artist.lowercased().contains(searchText.lowercased())
+        }
+      
+        self.listTableView.reloadData()
+    }
     
    
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedindex = indexPath.row
+        self.performSegue(withIdentifier: "Details", sender: nil)
+        
+    }
     
     
     
@@ -53,17 +79,36 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return 1;
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if searchController.isActive && searchController.searchBar.text != "" {
+            presentlist = listsearched
+            return listsearched.count
+        }
+        presentlist = list
         return list.count;
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: CustomTableViewCell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! CustomTableViewCell
         
-        cell.artist.text = list[indexPath.row].artist
-        cell.title.text = list[indexPath.row].title
-        let url = URL(string: list[indexPath.row].imageUrl)
+        let playlistvalue = presentlist[indexPath.row]
+        
+        
+        cell.artist.text = playlistvalue.artist
+        cell.title.text = playlistvalue.title
+        let url = URL(string: playlistvalue.imageUrl)
         cell.cellimageView.kf.setImage(with: url)
-        return cell
+        
+            return cell
     }
 }
 
+
+extension ViewController: UISearchResultsUpdating {
+    @available(iOS 8.0, *)
+    public func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchText: searchController.searchBar.text!)
+        
+    }
+
+
+}
