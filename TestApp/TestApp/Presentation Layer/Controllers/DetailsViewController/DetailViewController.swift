@@ -36,7 +36,7 @@ class DetailViewController: UIViewController {
     
     
     func setData(){
-        self.titleofList.text = singleITemData.title
+        self.titleofList.text = singleITemData.title as String
         let url = URL(string: singleITemData.imageUrl)
         imageView.kf.setImage(with: url)
     }

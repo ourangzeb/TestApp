@@ -9,13 +9,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TestApp/ViewController.swift"
-            timestampString = "502750976.762395"
+            filePath = "TestApp/Presentation Layer/Controllers/DetailsViewController/DetailViewController.swift"
+            timestampString = "502751128.004991"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "setlatestepisodes()"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "setData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TestApp/Data Access Layer/Network Layer/NetworkManager.swift"
+            timestampString = "502751602.321151"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "parseJson(JSON:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -14,6 +14,7 @@
 		CB11CDAB1DF73BB600B1A9B9 /* PlayList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11CDAA1DF73BB600B1A9B9 /* PlayList.swift */; };
 		CB11CDAD1DF741FB00B1A9B9 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11CDAC1DF741FB00B1A9B9 /* CustomTableViewCell.swift */; };
 		CB11CDB11DF75CB900B1A9B9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11CDB01DF75CB900B1A9B9 /* DetailViewController.swift */; };
+		CB11CDB31DF7602300B1A9B9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11CDB21DF7602300B1A9B9 /* Extensions.swift */; };
 		CB3E0F451DF7283B009CB04A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3E0F441DF7283B009CB04A /* AppDelegate.swift */; };
 		CB3E0F471DF7283B009CB04A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3E0F461DF7283B009CB04A /* ViewController.swift */; };
 		CB3E0F4A1DF7283B009CB04A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB3E0F481DF7283B009CB04A /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 		CB11CDAA1DF73BB600B1A9B9 /* PlayList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayList.swift; sourceTree = "<group>"; };
 		CB11CDAC1DF741FB00B1A9B9 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		CB11CDB01DF75CB900B1A9B9 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		CB11CDB21DF7602300B1A9B9 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CB3E0F411DF7283B009CB04A /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB3E0F441DF7283B009CB04A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		CB3E0F461DF7283B009CB04A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../../ViewController.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 		CB3E0F8A1DF72928009CB04A /* Helpers & Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				CB11CDB21DF7602300B1A9B9 /* Extensions.swift */,
 			);
 			path = "Helpers & Extensions";
 			sourceTree = "<group>";
@@ -664,6 +667,7 @@
 				CB11CDAD1DF741FB00B1A9B9 /* CustomTableViewCell.swift in Sources */,
 				CB11CDA91DF7346600B1A9B9 /* NetworkManager.swift in Sources */,
 				CB3E0F471DF7283B009CB04A /* ViewController.swift in Sources */,
+				CB11CDB31DF7602300B1A9B9 /* Extensions.swift in Sources */,
 				CB3E0F4D1DF7283B009CB04A /* TestApp.xcdatamodeld in Sources */,
 				CB11CDAB1DF73BB600B1A9B9 /* PlayList.swift in Sources */,
 				CB3E0F451DF7283B009CB04A /* AppDelegate.swift in Sources */,

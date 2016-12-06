@@ -1,8 +1,8 @@
 //
-//  Episode.swift
-//  Panarmenian TV
+//  PlayList.swift
+//  TestApp
 //
-//  Created by Ourangzaib khan on 2/10/16.
+//  Created by Ourangzaib khan on 12/6/16.
 //  Copyright © 2016 Ourangzaib khan. All rights reserved.
 //
 

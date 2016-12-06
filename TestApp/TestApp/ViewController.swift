@@ -19,10 +19,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var selectedindex : Int = 0
     let searchController = UISearchController(searchResultsController: nil)
 
+    
+    
     // Pragma MARK: View Controller Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-       setlatestepisodes()
+       getdatafromnetwork()
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
@@ -45,7 +47,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         
     }
-    func setlatestepisodes(){
+   
+    // Pragma MARK: Seearching
+    
+    func filterContentForSearchText(searchText: String, scope: String = "All") {
+        listsearched  = list.filter { singlelist in
+            return singlelist.title.lowercased().contains(searchText.lowercased()) || singlelist.artist.lowercased().contains(searchText.lowercased())
+        }
+        
+        self.listTableView.reloadData()
+    }
+    
+    
+    // Pragma MARK: Get Data from network
+    
+    func getdatafromnetwork(){
         
         let value = NetworkManager();
         
@@ -54,30 +70,30 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self.listTableView.reloadData()
         })
     }
-    func filterContentForSearchText(searchText: String, scope: String = "All") {
-        listsearched  = list.filter { singlelist in
-            return singlelist.title.lowercased().contains(searchText.lowercased()) || singlelist.artist.lowercased().contains(searchText.lowercased())
-        }
-      
-        self.listTableView.reloadData()
-    }
     
    
+    
+    
+    
+    // Pragma MARK: Table View Data sources
+    
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedindex = indexPath.row
         self.performSegue(withIdentifier: "Details", sender: nil)
         
     }
     
-    
-    
-    // Pragma MARK: Table View Data sources
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Title"
+        return "All Playlist"
     }
+    
+    
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1;
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if searchController.isActive && searchController.searchBar.text != "" {
             presentlist = listsearched
@@ -87,28 +103,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return list.count;
     }
 
+    
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: CustomTableViewCell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! CustomTableViewCell
         
         let playlistvalue = presentlist[indexPath.row]
-        
-        
         cell.artist.text = playlistvalue.artist
         cell.title.text = playlistvalue.title
         let url = URL(string: playlistvalue.imageUrl)
         cell.cellimageView.kf.setImage(with: url)
+      
         
             return cell
     }
 }
 
 
-extension ViewController: UISearchResultsUpdating {
-    @available(iOS 8.0, *)
-    public func updateSearchResults(for searchController: UISearchController) {
-        filterContentForSearchText(searchText: searchController.searchBar.text!)
-        
-    }
-
-
-}
