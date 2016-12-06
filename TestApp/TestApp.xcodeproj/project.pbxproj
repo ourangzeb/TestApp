@@ -12,6 +12,7 @@
 		7DC84B96D9C1724695940CBB /* Pods_TestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 320DD76BEECF2F74BC56F94F /* Pods_TestApp.framework */; };
 		CB11CDA91DF7346600B1A9B9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11CDA81DF7346600B1A9B9 /* NetworkManager.swift */; };
 		CB11CDAB1DF73BB600B1A9B9 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11CDAA1DF73BB600B1A9B9 /* Episode.swift */; };
+		CB11CDAD1DF741FB00B1A9B9 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11CDAC1DF741FB00B1A9B9 /* CustomTableViewCell.swift */; };
 		CB3E0F451DF7283B009CB04A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3E0F441DF7283B009CB04A /* AppDelegate.swift */; };
 		CB3E0F471DF7283B009CB04A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3E0F461DF7283B009CB04A /* ViewController.swift */; };
 		CB3E0F4A1DF7283B009CB04A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB3E0F481DF7283B009CB04A /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 		852D025D9034725C5CE5C604 /* Pods-TestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestApp/Pods-TestApp.release.xcconfig"; sourceTree = "<group>"; };
 		CB11CDA81DF7346600B1A9B9 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		CB11CDAA1DF73BB600B1A9B9 /* Episode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
+		CB11CDAC1DF741FB00B1A9B9 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		CB3E0F411DF7283B009CB04A /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB3E0F441DF7283B009CB04A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		CB3E0F461DF7283B009CB04A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../ViewController.swift; sourceTree = "<group>"; };
@@ -325,6 +327,7 @@
 		CB3E0F9C1DF72938009CB04A /* CustomCells */ = {
 			isa = PBXGroup;
 			children = (
+				CB11CDAC1DF741FB00B1A9B9 /* CustomTableViewCell.swift */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -639,6 +642,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB11CDAD1DF741FB00B1A9B9 /* CustomTableViewCell.swift in Sources */,
 				CB11CDA91DF7346600B1A9B9 /* NetworkManager.swift in Sources */,
 				CB3E0F471DF7283B009CB04A /* ViewController.swift in Sources */,
 				CB3E0F4D1DF7283B009CB04A /* TestApp.xcdatamodeld in Sources */,

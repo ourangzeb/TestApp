@@ -13,6 +13,17 @@ class NetworkManager: NSObject {
     
     var request : Alamofire.Request!
     
+    func getJsonData(){
+        
+        Alamofire.request("https://www.bbc.co.uk/radio1/playlist.json").responseJSON { response in
+            
+            if let JSON = response.result.value {
+                print("JSON: \(JSON)")
+            }
+        }
+        
+    }
+    
     
 
 }

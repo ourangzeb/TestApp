@@ -39,14 +39,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return "Title"
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3;
+        return 1;
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0;
+        return 4;
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell: CustomTableViewCell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! CustomTableViewCell
+        
+        cell.artist.text = "Hello world"
+        cell.title.text = "Hello world"
+        
+        return cell
     }
 }
 
