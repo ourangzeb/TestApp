@@ -1,0 +1,34 @@
+PODS:
+  - Alamofire (4.0.1)
+  - AlamofireDomain (4.1)
+  - AlamofireObjectMapper (4.0.0):
+    - Alamofire (~> 4.0)
+    - ObjectMapper (~> 2.0)
+  - AlamofireSwiftyJSON (0.2.0):
+    - Alamofire (~> 4.0)
+    - SwiftyJSON (~> 3.1)
+  - Kingfisher (3.2.0)
+  - MBProgressHUD (1.0.0)
+  - ObjectMapper (2.2.1)
+  - SwiftyJSON (3.1.1)
+
+DEPENDENCIES:
+  - AlamofireDomain (~> 4.1)
+  - AlamofireObjectMapper
+  - AlamofireSwiftyJSON
+  - Kingfisher (~> 3.2)
+  - MBProgressHUD
+
+SPEC CHECKSUMS:
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  AlamofireDomain: 6a17c975e5fe8c10d8dbfdb1ab28e6dd0ae7cd41
+  AlamofireObjectMapper: 9faa3ce5a240efda1b209009a2d6e1e949227abc
+  AlamofireSwiftyJSON: 5a49196b8b061e32f5ebc84fa0815300bd8a974e
+  Kingfisher: 50407d1d5dbc34965009d425a286342ff36a84ea
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  ObjectMapper: 41e43e1a89f8060ef5ea5d04ba852e269a621d68
+  SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
+
+PODFILE CHECKSUM: bf5eb4fed57aac657691fecc32ff082bf2efeabb
+
+COCOAPODS: 1.1.1
